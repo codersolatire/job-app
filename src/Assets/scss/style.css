@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/*------------- Variables --------------*/
+header {
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+header .header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-wrap .heading {
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.job-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: 7px;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+.job-card .company-logo img {
+  width: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 5px;
+}
+.job-card .card-body .content-wrapper {
+  margin-bottom: 24px;
+}
+.job-card .card-body .content-wrapper .job-title {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #212121;
+}
+.job-card .card-body .content-wrapper .sub-title {
+  font-size: 15px;
+  font-weight: 400;
+  color: #212121;
+}
+.job-card .card-body .content-wrapper .location {
+  display: block;
+  font-size: 15px;
+  color: #646464;
+  margin-bottom: 24px;
+}
+.job-card .card-body .content-wrapper .info-text {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.job-card .card-body .button-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #FAFAFA;
+  font-family: "Poppins", sans-serif;
+}
+
+.space {
+  padding: 80px 0;
+}
+
+p,
+span,
+strong,
+ul li,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #212121;
+  padding: 0;
+  margin-bottom: 7px;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.button, .secondary-btn, .primary-btn {
+  font-size: 16px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid #1597E4;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s all ease-in-out;
+}
+
+.primary-btn {
+  color: #ffffff;
+  background-color: #1597E4;
+}
+.primary-btn:hover {
+  background-color: #ffffff;
+  color: #1597E4;
+}
+
+.secondary-btn {
+  color: #1597E4;
+  background-color: #ffffff;
+}
+.secondary-btn:hover {
+  background-color: #1597E4;
+  color: #ffffff;
+}
+
+/*---------- Form ----------*/
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.row .form-group {
+  width: 50%;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 24px;
+  width: 100%;
+}
+.form-group label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #212121;
+  display: block;
+  margin-bottom: 4px;
+}
+.form-group label sup {
+  font-size: 14px;
+  color: #D86161;
+}
+.form-group .form-input {
+  font-size: 16px;
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  padding: 0 1.2rem;
+  margin-left: auto;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  transition: 0.3s all ease-in-out;
+}
+.form-group .form-input:focus {
+  outline: none;
+  border: 1px solid #1597E4;
+}
+.form-group .form-radio {
+  display: flex;
+  gap: 1rem;
+}
+.form-group .form-radio .input-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.form-group .form-radio .input-check label {
+  margin: 0;
+  opacity: 0.7;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+input[type=number] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
+/*---------- End ----------*/
+/*---------- Modal ----------*/
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow-y: scroll;
+  background: rgba(8, 34, 60, 0.73);
+}
+.modal .modal-content {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: 2rem auto;
+  width: 550px;
+}
+.modal .modal-content .modal-header {
+  position: relative;
+  text-align: right;
+  padding: 10px;
+}
+.modal .modal-content .modal-header .close-btn {
+  cursor: pointer;
+  padding: 3px 10px;
+  border: 1px solid #1597E4;
+  background-color: #FAFAFA;
+  border-radius: 3px;
+  color: #212121;
+  font-size: 12px;
+  transition: 0.3s all ease-in-out;
+}
+.modal .modal-content .modal-header .close-btn:hover {
+  background-color: #1597E4;
+  color: #ffffff;
+}
+.modal .modal-content .modal-body {
+  padding: 1rem;
+}
+.modal .modal-content .modal-body .form-wrapper .form-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.modal .modal-content .modal-body .form-wrapper .form-header .title {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+.modal .modal-content .modal-body .form-wrapper .form-header .sub-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+.modal .modal-content .modal-body .form-wrapper .primary-btn {
+  display: flex;
+  margin-left: auto;
+}
+
+/*---------- End ----------*/
+@media screen and (max-width: 991px) {
+  .job-card-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  .space {
+    padding: 30px 0;
+  }
+  .button, .primary-btn, .secondary-btn {
+    font-size: 14px;
+    padding: 7px 10px;
+  }
+  header .header-wrap .heading {
+    font-size: 18px;
+  }
+  .job-card {
+    margin: 0 10px;
+  }
+  .job-card .card-body .content-wrapper .sub-title {
+    font-size: 14px;
+  }
+  .job-card .card-body .content-wrapper .job-title {
+    font-size: 18px;
+  }
+  .job-card .card-body .content-wrapper .location {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .job-card .card-body .content-wrapper .info-text {
+    font-size: 14px;
+  }
+  .modal .modal-content {
+    width: calc(100% - 10px);
+  }
+  .row {
+    flex-wrap: wrap;
+  }
+  .row .form-group {
+    width: 100%;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+  .form-group .form-input,
+  .form-group label {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=style.css.map */

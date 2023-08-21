@@ -1,0 +1,45 @@
+.job-card {
+  display: flex;
+  flex-wrap:wrap;
+  gap: 1rem;
+  border-radius: 7px;
+  padding: 1rem;
+  background-color: $white;
+  .company-logo {
+    img {
+      width: 40px;
+      object-fit: contain;
+      border-radius: 5px;
+    }
+  }
+  .card-body {
+    .content-wrapper {
+      margin-bottom: 24px;
+      .job-title {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        color: $dark;
+      }
+      .sub-title {
+        font-size: 15px;
+        font-weight: 400;
+        color: $dark;
+      }
+      .location {
+        display: block;
+        font-size: 15px;
+        color: $gray;
+        margin-bottom: 24px;
+      }
+      .info-text {
+        font-size: 15px;
+        margin-bottom: 8px;
+      }
+    }
+    .button-wrapper {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}

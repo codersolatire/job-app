@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { createJob, updateJob } from "../Api/JobApi";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Modal = ({
   isOpen,
@@ -52,6 +54,7 @@ const Modal = ({
         const response = await createJob(formData);
         console.log("created successfully:", response);
         onClose();
+        // fetchJobData();
         window.location.reload();
       }
     } catch (error) {
@@ -61,15 +64,10 @@ const Modal = ({
 
   const handleNextStep = (e) => {
     e.preventDefault();
-    // if (!submitted) {
-    //   setSubmitted(true);
-    //   console.log("field is required");
-    //   // return;
-    // }
-    // else{
-    //   console.log("nex step");
-    //   setCurrentStep((prevStep) => prevStep + 1);
-    // }
+    if (!submitted) {
+      setSubmitted(true);
+      // return;
+    }
     if (currentStep < 2) {
       setCurrentStep((prevStep) => prevStep + 1);
     }
@@ -115,11 +113,7 @@ const Modal = ({
   return (
     <div className="modal">
       <div className="modal-content">
-        <div className="modal-header">
-          <button className="close-btn" onClick={onClose}>
-            X
-          </button>
-        </div>
+          <FontAwesomeIcon icon={faTimes} type="button" className="close-btn" onClick={onClose}/>
         <div className="modal-body">
           <form onSubmit={handleSubmit}>
             <div className="form-wrapper">
@@ -189,7 +183,7 @@ const Modal = ({
                         type="text"
                         value={location}
                         onChange={(e) => setLocation(e.target.value)}
-                        placeholder="ex. Information Technology"
+                        placeholder="ex. Chennai"
                       />
                       {submitted && location.length === 0 && (
                         <span className="error-msg">
@@ -205,7 +199,7 @@ const Modal = ({
                         type="text"
                         value={remoteType}
                         onChange={(e) => setRemoteType(e.target.value)}
-                        placeholder="ex. Information Technology"
+                        placeholder="ex. In Office"
                       />
                       {submitted && remoteType.length === 0 && (
                         <span className="error-msg">

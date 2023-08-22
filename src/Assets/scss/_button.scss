@@ -30,3 +30,18 @@
     }
   }
   
+
+  .update-delete-btn{
+    position: absolute;
+    right: 1rem;
+    top: 1rem ;
+    display: flex;
+    gap: 16px;
+
+    .trash{
+      color: #dc3545;
+    }
+    .edit{
+      color: #198754;
+    }
+  }

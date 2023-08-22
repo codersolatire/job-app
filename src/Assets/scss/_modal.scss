@@ -16,54 +16,50 @@
     background-color: $white;
     border-radius: 5px;
     margin: 2rem auto;
-    width: 550px;
+    padding: 32px;
+    width: 577px;
+    .close-btn {
+      position: absolute;
+      right: -5px;
+      top: -7px;
+      padding: 5px 7px;
+      font-size: 14px;
+      background: $white;
+      border: 1px solid $primary-color;
+      cursor: pointer;
+      color: $primary-color;
+      transition: 0.3s all ease-in-out;
 
-    .modal-header {
-      position: relative;
-      text-align: right;
-      padding: 10px;
-      .close-btn {
-       cursor: pointer;
-       padding: 3px 10px;
-       border: 1px solid $primary-color;
-       background-color: $bg;
-       border-radius: 3px;
-       color: $dark;
-       font-size: 12px;
-       transition: 0.3s all ease-in-out;
-
-       &:hover {
-         background-color: $primary-color;
-         color: $white;
-       }
+      &:hover {
+        background-color: $primary-color;
+        color: $white;
       }
     }
 
     .modal-body {
-      padding: 1rem;
-      .form-wrapper{
-        .form-header{
+      .form-wrapper {
+        .form-header {
           display: flex;
           justify-content: space-between;
           margin-bottom: 24px;
-          .title{
+          .title {
             font-size: 20px;
             font-weight: 400;
             margin: 0;
           }
 
-          .sub-title{
+          .sub-title {
             font-size: 16px;
             font-weight: 500;
             margin: 0;
           }
         }
-        .primary-btn{
+        .primary-btn {
           display: flex;
           margin-left: auto;
         }
 
-        .error-msg{
+        .error-msg {
           font-size: 14px;
           color: red;
         }

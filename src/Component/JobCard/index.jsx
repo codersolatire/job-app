@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const JobCard = ({
   logoSrc,
@@ -32,20 +34,15 @@ const JobCard = ({
         <button type="button" className="secondary-btn">
           External Apply
         </button>
-        <button
-          type="button"
-          className="primary-btn"
-          onClick={() => handleDelete()} 
-        >
-          Delete
-        </button>
-        <button
-          type="button"
-          className="primary-btn"
-          onClick={() => handleEdit()} 
-        >
-          Edit
-        </button>
+
+        <div className="update-delete-btn">
+          <button type="button" className="edit" onClick={() => handleEdit()}>
+            <FontAwesomeIcon icon={faEdit} />
+          </button>
+          <button type="button" className="trash" onClick={() => handleDelete()}>
+            <FontAwesomeIcon icon={faTrash} />
+          </button>
+        </div>
       </div>
     </div>
   </div>

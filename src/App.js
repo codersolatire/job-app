@@ -2,6 +2,9 @@
 import Home from './Component/Home/index';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './Assets/scss/style.scss';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
 
 function App() {
   return (
